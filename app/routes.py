@@ -4,7 +4,8 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    user = {'username': 'Test User'}
+    return render_template('index.html', title='Home', user=user)
 
 @app.route('/register')
 def register():
@@ -12,4 +13,4 @@ def register():
 
 @app.route('/login')
 def login():
-    pass
+    render_template('login.html') 

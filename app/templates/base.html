@@ -1,0 +1,14 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - rmmts</title>
+      {% else %}
+      <title>Welcome to rmmts</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>rmmts: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
